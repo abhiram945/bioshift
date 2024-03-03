@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: arial;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+body{
+    width: 100%;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+nav{
+    display: flex;
+    padding:0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7.5vh;
+    background-color: #95BC55;
+    position:sticky;
+    top:0;
+    z-index: 1;
+}
+nav .logo h1{
+    color:#FAF0E6;
+}
+nav .navItems a{
+    color: #FAF0E6;
+    padding:0.5rem 0.75rem;
+    background-color:#333333;
+    border-radius: 0.25rem;
+    transition: all 0.25s ease;
+}
+nav .navItems a:hover{
+    background-color: #FAF0E6;
+    color: #333333;
+}
+main .heroImageContainer{
+    height: 100vh;
+    width: 100%;
+    background: url('https://ecomaniac.org/wp-content/uploads/2022/10/Packaging-Made-From-Biodegradable-Materials.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    margin: auto;
+    display: flex;
+    gap:1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heroImageContainer h2{
+    background-color: #95BC55;
+    text-align: center;
+    padding:1rem;
+    color: #FAF0E6;
+    font-size: 3.5rem;
+    transition: all 0.25s ease-out;
+}
+.heroImageContainer h2:hover{
+    transform: scale(1.2);
+    border-radius: 2rem;
+    color:#95BC55;
+    background-color: #FAF0E6;
+}
+.heroImageContainer p{
+    background-color: #FAF0E6;
+    color: #333333;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+main .sellWastageContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('./waste.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.sellWastageContainer .glassContainer{
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5px);
+    padding:2.5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;gap:1rem;
+}
+.glassContainer h2, .glassContainer p{
+    color: #FAF0E6;
+}
+.glassContainer input[type="file"]::-webkit-file-upload-button{
+    border: none;
+    padding:0.5rem 0.25rem;
+    cursor: pointer;
+    color: #95BC55;
+    transition: all ease 0.25s;
+}
+.glassContainer input[type="file"]::-webkit-file-upload-button:hover{
+    color: #FAF0E6;
+    background-color: #95BC55;
+    padding:0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.glassContainer #imagePreview{
+    text-align: center;
+}
+.glassContainer button{
+    padding:0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top:0.5rem;
+    transition: all 0.25s ease;
+}
+.glassContainer button:hover{
+    background-color: #95BC55;
+    color: #FAF0E6;
+}
+.productsContainer{
+    width: 100%;
+    padding-top:7.5vh;
+}
+.productsContainer h3{
+    text-align: center;
+    color:#333333;
+}
+.productsContainer .products{
+    padding:2.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22.5vw, 1fr));
+    gap:5rem;
+}
+.products .product{
+    height: 20rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.product img{
+    width: 100%;
+}
+footer{
+    width: 100%;
+    color:#FAF0E6;
+    background-color: #5C5470;
+    padding:0.5rem;
+}
+@media screen and (max-width:480px){
+    nav{
+        flex-direction: column;
+        padding :0;
+        height: 10vh;
+    }
+    nav .navItems{
+        width: 100%;
+        display: flex;
+        gap:1rem;
+        padding:0.25rem 0;
+        overflow-x: scroll;
+    }
+    .productsContainer{
+        padding-top:10vh;
+    }
+    .productsContainer .products{
+        grid-template-columns: 1fr !important;
+        padding:1rem;
+    }
+}
